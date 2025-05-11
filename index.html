@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Intro section with dropdown navigation</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    #head {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px auto 0px auto;
+    }
+
+    .nav-container {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px auto;
+    }
+
+    nav ul {
+      width: 550px;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: rgb(89, 89, 89);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .features-menu,
+    .company-menu {
+      display: none;
+      width: 150px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+    }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown-item img {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+
+    .dropdown-item p {
+      font-size: 15px;
+    }
+
+    .company-menu p {
+      font-size: 15px;
+    }
+
+    .auth-container {
+      width: 160px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .register-btn {
+      color: rgb(89, 89, 89);
+      font-weight: 500;
+      background-color: white;
+      border: 1px solid rgb(89, 89, 89);
+      border-radius: 20px;
+      padding: 10px;
+      width: 100px;
+    }
+
+    .main-content {
+      width: 80%;
+      display: flex;
+      margin: 50px auto 0px auto;
+      align-items: center;
+    }
+
+    .left-content {
+      width: 55%;
+      padding: 60px 150px 100px 0px;
+    }
+
+    .left-content h1 {
+      font-size: 90px;
+    }
+
+    .left-content p {
+      font-size: 20px;
+      margin-top: -30px;
+      color: rgb(89, 89, 89);
+      width: 450px;
+    }
+
+    .learn-more-btn {
+      background-color: black;
+      color: white;
+      border-radius: 15px;
+      height: 50px;
+      border: none;
+      padding: 10px;
+      width: 150px;
+      font-size: 16px;
+      margin: 30px 0px;
+    }
+
+    .clients {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .right-content {
+      width: 40%;
+    }
+
+    .right-content img {
+      width: 500px;
+    }
+
+    .auth-container a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .burger {
+      width: 30px;
+      height: 30px;
+      display: none;
+    }
+
+    .mobile-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 1000px;
+    }
+
+    .mobile-burger {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      background-color: white;
+    }
+
+    .nav-mobile {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .auth-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+      #head {
+        margin: 20px auto 0px auto;
+      }
+
+      .nav-container {
+        display: flex;
+        width: 700px;
+        justify-content: space-between;
+      }
+
+      .main-content {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .left-content {
+        width: 90%;
+        padding: 0px;
+      }
+
+      .left-content h1 {
+        font-size: 70px;
+      }
+
+      .left-content p {
+        font-size: 16px;
+        width: 300px;
+      }
+
+      .learn-more-btn {
+        height: 45px;
+        width: 130px;
+        margin: 10px 0px 30px 0px;
+      }
+
+      .clients {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .right-content {
+        width: 90%;
+        margin-top: 20px;
+      }
+
+      .right-content img {
+        width: 100%;
+      }
+
+      .burger {
+        display: block;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="head">
+    <div class="nav-container">
+      <div>
+        <img src="logo.svg" alt="">
+      </div>
+      <div class="mobile-menu">
+        <nav>
+          <ul class="nav-ul">
+            <li>
+              <a class="features-link" href="#">Features ⌵</a>
+              <div>
+                <div class="features-menu">
+                  <div class="dropdown-item">
+                    <img src="icon-todo.svg" alt="">
+                    <p>Todo List</p>
+                  </div>
+                  <div class="dropdown-item">
+                    <img src="icon-calendar.svg" alt="">
+                    <p>Calendars</p>
+                  </div>
+                  <div class="dropdown-item">
+                    <img src="icon-reminders.svg" alt="">
+                    <p>Reminders</p>
+                  </div>
+                  <div class="dropdown-item">
+                    <img src="icon-planning.svg" alt="">
+                    <p>Planning</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="company-link" href="#">Company ⌵</a>
+              <div>
+                <div class="company-menu">
+                  <p>History</p>
+                  <p>Our Team</p>
+                  <p>Blog</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="auth-container">
+          <a href="#">Login</a>
+          <button class="register-btn">Register</button>
+        </div>
+      </div>
+    </div>
+    <div><img class="burger" src="burger-bar.png" alt=""></div>
+  </header>
+
+  <div class="main-content">
+    <div class="left-content">
+      <h1>Make remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+        productivity soar.</p>
+      <button class="learn-more-btn">Learn more</button>
+      <div class="clients">
+        <img src="client-databiz.svg" alt="">
+        <img src="client-audiophile.svg" alt="">
+        <img src="client-meet.svg" alt="">
+        <img src="client-maker.svg" alt="">
+      </div>
+    </div>
+    <div class="right-content">
+      <img src="image-hero-desktop.png" alt="">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
